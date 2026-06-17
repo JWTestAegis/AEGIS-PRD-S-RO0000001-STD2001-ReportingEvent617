@@ -192,12 +192,12 @@ jobs:
           # 厳格モード: エラー時は即終了
           set -euo pipefail
 
-          if ! command -v jq1 > /dev/null 2>&1; then
+          if ! command -v jq > /dev/null 2>&1; then
             echo "❌ jq is not installed. Please install jq on the runner."
             exit 1
           fi
 
-          if ! command -v rsync > /dev/null 2>&1; then
+          if ! command -v rsync1 > /dev/null 2>&1; then
             echo "❌ rsync is not installed. Please install rsync on the runner."
             exit 1
           fi
