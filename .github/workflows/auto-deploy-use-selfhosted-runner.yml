@@ -391,7 +391,7 @@ jobs:
           # 6. 初回配信時のみ、配送先ルートに .Rprofile.org を作成する
           #    二回目以降の配信では既存ファイルを維持し、再作成しない
           if [ ! -f "$DEST_PATH/.Rprofile.org" ]; then
-            cp /mnt/sys/init/R/.Rprofile "$DEST_PATH/.Rprofile.org"
+            cp /mnt/sys/init/R/.Rprofile.back "$DEST_PATH/.Rprofile.org"
             echo "Created initial .Rprofile.org in destination root." | tee -a "$LOG_FILE"
           else
             echo "Skipped creating .Rprofile.org because it already exists." | tee -a "$LOG_FILE"
